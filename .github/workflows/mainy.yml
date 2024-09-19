@@ -1,0 +1,19 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the current repository
+    - name: Checkout Current Repository
+      uses: actions/checkout@v3
+
+    # Example step to list files in the repository
+    - name: List files in the repository
+      run: ls -la
